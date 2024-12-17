@@ -8,13 +8,13 @@
             },
             "previewLimit": 50,
             "server": "localhost",
-            "port": 1433,
             "driver": "MSSQL",
             "username": "sa",
-            "password": "YourStrong!Passw0rd",
+            "password": "YourStrongPassword!123",
             "group": "sa",
             "name": "testbp",
-            "database": "master"
+            "database": "master",
+            "connectString": "Server=localhost,1433;Database=master;User Id=sa;Password=YourStrongPassword!123;"
         }
     ]
 }
