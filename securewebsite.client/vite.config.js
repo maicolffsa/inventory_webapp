@@ -10,9 +10,9 @@ import { env } from 'process';
 /*const baseFolder =
     env.APPDATA !== undefined && env.APPDATA !== ''
         ? `${env.APPDATA}/ASP.NET/https`
-        : `/app/shared/ssl`;
+        : `${env.HOME}/.aspnet/https`;
 
-const certificateName = "server";
+const certificateName = "securewebsite.client";
 const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
 const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
 
@@ -29,8 +29,6 @@ if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
         throw new Error("Could not create certificate.");
     }
 }*/
-
-const target =  'http://localhost:5003';
 
 
 // https://vitejs.dev/config/
@@ -52,7 +50,6 @@ export default defineConfig({
                 secure: false
             }
         },
-        historyApiFallback: true,
         port: 5173,
         https: false
     }
